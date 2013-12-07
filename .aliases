@@ -1,0 +1,174 @@
+#####################################
+#######         Alias'      #########
+#####################################
+
+# ZSH
+alias zshconfig='subl ~/.zshrc'
+alias ohmyzsh='subl ~/.oh-my-zsh'
+alias clearlogs='sudo rm -rf /private/var/log/asl/*.asl'
+alias redit='find . -mtime -1'
+alias dt='cd ~/Desktop'
+
+# Run color script for testing color schemes
+alias color='bash ~/scripts/ansi.sh'
+
+#General
+alias ss='python -m SimpleHTTPServer' # Start python server
+alias ns='http-server'  # Start node.js server
+alias task="subl ~/TODO.todo" # Open PlainTask TODO in ST2
+
+alias ls='ls -lhF'
+alias ll='ls -hl'
+alias ss='python -m SimpleHTTPServer' # Start simple server in pwd
+
+# Charles Proxy
+alias charles='open /Applications/Charles.app -headless'
+
+# Alias Apache Bench to the MAMP installed version. OSX Mountain Lion stocker version is busted
+alias ab='/Applications/MAMP/bin/apache2/bin/ab '
+
+# Vagrant
+alias vag='vagrant'
+alias vagu='vagrant up'
+alias vagd='vagrant destroy'
+alias vagh='vagrant halt'
+alias vagss='vagrant suspend'
+alias vags='vagrant status'
+
+# Node Version Manager
+source ~/.nvm/nvm.sh
+alias nvm='/Users/161751/scripts/nvm'
+
+# SSH Commands
+alias sshded='ssh u69222649@s418546556.onlinehome.us'
+alias sshedmysql='mysql -h localhost -u dbo420885323 -p -S /tmp/mysql5.sock db420885323'
+
+# Project shortcuts - Any heavily used projects alias
+alias proto='cd /Users/161751/Projects/Prototypes'
+alias dot='cd /Users/161751/dotfiles'
+alias edot='subl /Users/161751/dotfiles'
+alias iax='cd /Users/161751/Projects/MB3/iax'
+alias active='cd /Users/161751/Projects/ACTIVE'
+
+# Creative Services Template Shortucts
+alias cs_temps='cd /Users/161751/creative_services/Interactive-Ad-Templates'
+alias cs_cart='cd /Users/161751/Projects/Process_Documents/Cartridge'
+alias cs_rsi='cd /Users/161751/creative_services/rsi'
+
+# Logs - For MAMP stack software
+alias phplog='tail -f /Applications/MAMP/logs/php_error.log'
+alias apachelog='tail -f /Applications/MAMP/logs/apache_error.log'
+alias mysqllog='tail -f /Applications/MAMP/logs/mysql_error_log.err'
+
+# Reload this config file without reopening terminal.
+alias reload='clear && . ~/.zshrc && echo -e "$(tput setaf 2)Z-Shell configuration file reloaded successfully!$(tput sgr0)"'
+
+# Edit Hosts File with Sublime
+alias edithosts='sudo subl /etc/hosts'
+
+# VimRC Edit
+alias vimrc='subl ~/dotfiles/vim/vimrc'
+
+# Copy public ssh key to cliboard
+alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard'"
+
+# Git Alias
+alias g='git'
+alias gs='git status '
+alias gst='git stash '
+alias gstp='git stash pop'
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit '
+alias gd='git diff --ignore-space-at-eol -b -w'
+alias gco='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+alias gpom='git push origin master'
+alias glog='git lg'
+alias gu='git reset --soft "HEAD^"'
+alias ghist='hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short'
+
+# Alias common misspellings
+alias got='git '
+alias get='git '
+
+# SNI SVN Alias'
+alias snisvn='cd /Users/161751/Sites/sni/sites/sni-manage-2/'
+
+# Utilties
+alias idim='sips -g pixelHeight -g pixelWidth $1' # Get image dimensions
+alias cleardesktop='mv ~/Desktop/* ~/DesktopDump' # Moves all DT files to ~/DesktopDump
+
+# Vim alias
+alias vimrc='subl ~/.vimrc' # Opens vimrc in Sublime Text
+
+# Todo.txt
+alias td='/Users/161751/scripts/todo.txt_cli-2.9/todo.sh'
+alias tdl='/Users/161751/scripts/todo.txt_cli-2.9/todo.sh list'
+alias todo='/Users/161751/scripts/todo.txt_cli-2.9/todo.sh list'
+alias tdo='/Users/161751/scripts/todo.txt_cli-2.9/todo.sh do '
+alias tda='/Users/161751/scripts/todo.txt_cli-2.9/todo.sh add'
+alias tdar='/Users/161751/scripts/todo.txt_cli-2.9/todo.sh archive'
+alias tdrm='/Users/161751/scripts/todo.txt_cli-2.9/todo.sh rm '
+alias tdu='/Users/161751/scripts/todo.txt_cli-2.9/todo.sh replace '
+alias tdp='/Users/161751/scripts/todo.txt_cli-2.9/todo.sh pri '
+
+# Misccelanneous Helpers
+alias cd..='cd ..'
+alias c='clear'
+alias path='echo -e ${PATH//:/\\n}'
+alias now='date +"%T'
+alias nowtime=now
+alias nowdate='date +"%d-%m-%Y"'
+alias ports='netstat -tulanp'
+
+# PHP Unit
+alias phpunit='vendor/bin/phpunit'
+alias t='phpunit --colors'
+
+# AWS Elastic Beanstalk (eb)
+alias ebs='eb status --verbose'
+
+# Alias to MAMP 5.4 PHP
+# alias php='/Applications/MAMP/bin/php/php5.4.10/bin/php'
+
+# PHP Server (Requires PHP 5.4+)
+alias phps='php -S localhost:8989'
+
+# List only directories
+alias lsd='ls -l | grep "^d"'
+
+# Undo a `git push`
+alias undopush="git push -f origin HEAD^:master"
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias lip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+# Enhanced WHOIS lookups
+alias whois="whois -h whois-servers.net"
+
+# Flush Directory Service cache
+alias flush="dscacheutil -flushcache"
+
+# View HTTP traffic
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+# Spotify Control
+alias sp="osascript ~/scripts/SpotifyControl/SpotifyControl.scpt"
+alias spp="sp pause"
+alias sps="sp start"
+alias spsh="sp shuffle"
+alias sprpt="sp repeat"
+alias spi="sp info"
+alias spne="sp next"
+alias sppr="sp previous"
+
+# Copy current PWD to clipboard
+alias pwdc="pwd | pbcopy"
+
+# Laravel Aliases
+alias art='php artisan'

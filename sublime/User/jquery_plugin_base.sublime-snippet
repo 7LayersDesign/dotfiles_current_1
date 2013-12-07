@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+(function( \$ ){
+	\$.fn.myPluginName = function() {
+		// your plugin logic
+	};
+})( jQuery );
+]]></content>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.javascript</scope>
+</snippet>

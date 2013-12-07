@@ -1,0 +1,18 @@
+[color]
+	ui = true
+	ui = true
+[user]
+	name = Andy
+	email = ahutchins@scrippsnetworks.com
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[core]
+	quotepath = false
+	excludesfile = /Users/161751/.gitignore
+[merge]
+	[mergetool "diffmerge"]
+[diff]
+	[difftool "diffmerge"]
+[push]
+	default = matching
+

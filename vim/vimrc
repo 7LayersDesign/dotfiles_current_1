@@ -1,0 +1,164 @@
+" ===============================================
+" Vim Config
+" Andy Hutchins
+" Thu Oct 10 23:06:23 2013
+" ===============================================
+
+" Load up the bundles.
+"call pathogen#infect("~/dotfiles/vim/bundle/{}")
+
+" Set Vim to not be compatible with vi. This is better.
+set nocompatible
+
+" Sets the default color scheme and color format
+set t_Co=256
+colorscheme xoria256
+
+" Set Vim to use BASH instead of ZSH
+set shell=/bin/bash
+
+" Set leader to ,
+let mapleader = ","
+
+" Set highlight style
+highlight Search cterm=underline
+
+" Open splits
+nmap vs :vsplit<cr>
+nmap hs :hsplit<cr>
+
+"Resize vsplit
+nmap <C-v> :vertical resize +5<cr>
+nmap 25 :vertical resize 40<cr>
+nmap 50 <c-w>=
+nmap 75 :vertical resize 120<cr>
+
+" Swap files out of the project root
+set backupdir=~/.vim/backup/
+set directory=~/.vim/swap/
+
+set autowrite  "Save on buffer switch
+set mouse=a " Allow mouse scroll
+
+" Turn on indenting
+filetype plugin indent on
+
+" Turns on syntax highlighting
+syntax on
+syntax enable
+
+" Turns on line numbers
+set number
+
+" Highlight current line
+set cursorline
+
+" Down is really the next line
+nnoremap j gj
+nnoremap k gk
+
+" Supposed to set linebreaks on spaces and not break words across lines
+set linebreak
+
+" Sets anti aliasing on by default
+set antialias
+
+" Ever notice a slight lag after typing the leader key + command? This lowers the timeout.
+set timeoutlen=50
+
+" Text stuff
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set linespace=15set 
+set nowrap
+set guifont=essentialpragmatapro:h16
+set smartindent
+set smarttab
+set copyindent          " copy the previous indentation on autoindenting
+set autoindent
+set expandtab
+set visualbell           " don't flash
+set noerrorbells         " don't beep
+set autoread
+
+"Auto change directory to match current file ,cd
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+
+"Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Quickly go forward or backward to buffer
+nmap :bp :BufSurfBack<cr>
+nmap :bn :BufSurfForward<cr>
+
+" Powerline (Fancy thingy at bottom stuff)
+let g:Powerline_symbols = 'fancy'
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+
+" Ctrl-n or :H will disable search highlighting
+set listchars=tab:>-,trail:·,eol:$
+nmap <silent> <leader>s :set nolist!<CR>
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" Fast editing of the .vimrc
+map <leader>v :e! ~/.vimrc<cr>
+
+" When vimrc is edited, reload it automatically
+autocmd! bufwritepost vimrc source ~/.vimrc
+
+" Auto-remove trailing spaces from PHP files
+autocmd BufWritePre *.php :%s/\s\+$//e
+
+" Laravel framework common files. (Thanks Jeffrey Way)
+nmap <leader>lr :e app/routes.php<cr>
+nmap <leader>lca :e app/config/app.php<cr>81Gf(%O
+nmap <leader>lcd :e app/config/database.php<cr>
+nmap <leader>lc :e composer.json<cr>
+
+" Increase scrolling to 3 lines at a time
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+
+set cmdheight=1 " Set command lines count
+set cmdwinheight=1 " Set command window height
+
+" File edited outside Vim auto-refresh in Vim
+set autoread
+
+" Map jk to <esc>
+inoremap jk <esc>
+
+" Open nerdtree
+nmap <C-b> :NERDTreeToggle<cr>
+
+" Longer history
+set history=1000
+
+" Turn on visual bell, No beeping :)
+set visualbell
+
+"Ignore case when searching
+set ignorecase
+
+"Set magic on, for regular expressions
+set magic
+"Show matching brackets when text indicator is over them
+set showmatch
+
+" Easier window navigation
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+" Map ; to :
+nnoremap ; :
+nnoremap : ;

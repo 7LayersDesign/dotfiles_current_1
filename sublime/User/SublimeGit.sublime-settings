@@ -1,0 +1,39 @@
+{
+	"email": "abhutchins2009@gmail.com",
+	"encoding": "utf-8",
+	"git_blame_warn_multiple_tabs": true,
+	"git_commit_pedantic": false,
+	"git_commit_verbose": false,
+	"git_executables":
+	{
+		"git":
+		[
+			"git"
+		],
+		"git_flow":
+		[
+			"git-flow"
+		],
+		"gitk":
+		[
+			"gitk"
+		],
+		"legit":
+		[
+			"legit"
+		]
+	},
+	"git_extensions":
+	{
+		"git_flow": true,
+		"legit": true
+	},
+	"git_help_fancy_list": true,
+	"git_help_html_path": null,
+	"git_set_upstream_on_push": true,
+	"git_show_status_help": true,
+	"git_status_bar": "fancy",
+	"git_update_status_on_focus": true,
+	"log_level": "WARNING",
+	"product_key": "ea3ad25ff03b069b283b38d6993b71da"
+}

@@ -1,0 +1,16 @@
+[
+	{ "keys": ["alt+q"], "command": "git_quick_commit_current_file" },
+	{ "keys": ["alt+c"], "command": "git_quick_commit" },
+	{ "keys": ["alt+b"], "command": "git_checkout_branch" },
+	{ "keys": ["alt+a"], "command": "git_add_current_file" },
+	{ "keys": ["alt+z"], "command": "git_checkout_current_file" },
+	{ "keys": ["alt+l"], "command": "git_log" },
+	{ "keys": ["alt+s"], "command": "git_quick_status" },
+	{ "keys": ["alt+d"], "command": "git_diff_cached" },
+	{ "keys": ["alt+u"], "command": "git_status" },
+	{ "keys": ["alt+p"], "command": "git_push" },
+
+	{"keys": ["super+shift+f9"], "command": "xdebug_session_start", "args": {"launch_browser": "true"}},
+	{ "keys": ["cmd+shift+11"], "command": "xdebug_restore_layout"}
+
+]
